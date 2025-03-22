@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlanetStats
+public class PlanetStats:MonoBehaviour
 {
     public int planet1TestStat;
     public int planet2TestStat;
@@ -15,4 +15,5 @@ public class PlanetStats
         planet4TestStat=StatGenerator2.GenerateStat();
         
     }
+     
 }
