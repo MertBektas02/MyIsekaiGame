@@ -8,6 +8,8 @@ public class Character : MonoBehaviour
     public Renderer characterRenderer;
     public TextMeshProUGUI statsText;
 
+    [SerializeField]
+    private float speed = 1f;
     public void Initialize(CharacterStats newStats)
     {
         stats = newStats;
@@ -25,5 +27,9 @@ public class Character : MonoBehaviour
             statsText.text = $"Spawned: {stats.characterName}\nSTR: {stats.strength}\nSTM: {stats.stamina}\nINT: {stats.intelligence}\nCHR: {stats.charisma}\nWLP: {stats.willPower}\nDXT: {stats.dexterity}";
         }
         Debug.Log($"Spawned: {stats.characterName} | STR: {stats.strength}, STM: {stats.stamina}, INT: {stats.intelligence}, CHR: {stats.charisma}, WLP: {stats.willPower}, DXT: {stats.dexterity}");
+    }
+    private void FixedUpdate()
+    {
+        transform.Translate(Vector3.down * speed * Time.deltaTime);
     }
 }

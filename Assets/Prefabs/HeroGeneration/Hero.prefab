@@ -126,3 +126,4 @@ MonoBehaviour:
   stats: {fileID: 0}
   characterRenderer: {fileID: 7622511142021334692}
   statsText: {fileID: 0}
+  speed: 0.25
